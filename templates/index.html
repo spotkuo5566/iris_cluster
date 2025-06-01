@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iris 花卉分類預測</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h2>輸入 Iris 資料（4 個特徵）</h2>
+  <form action="/predict" method="post">
+    <label>Sepal Length (cm):</label><br>
+    <input type="text" name="sepal_length"><br>
+    <label>Sepal Width (cm):</label><br>
+    <input type="text" name="sepal_width"><br>
+    <label>Petal Length (cm):</label><br>
+    <input type="text" name="petal_length"><br>
+    <label>Petal Width (cm):</label><br>
+    <input type="text" name="petal_width"><br><br>
+    <input type="submit" value="送出預測">
+  </form>
+
+  {% if result %}
+    <h3>預測結果：{{ result }}</h3>
+  {% endif %}
+</body>
+</html>
